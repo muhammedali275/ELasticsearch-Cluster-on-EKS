@@ -39,6 +39,16 @@ Check cluster services
 ----------------------
 #kubectl get svc
 
+Additional way :
+--------------
+We can deploy each role of elasticsearch pods separetly by role :
+
+helm install elasticsearch-multi-master elastic/elasticsearch -f ./master.yaml
+helm install elasticsearch-multi-data elastic/elasticsearch -f ./data.yaml
+helm install elasticsearch-multi-client elastic/elasticsearch -f ./client.yaml
+
+files are attached in github
+
 
 
 
